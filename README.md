@@ -12,12 +12,12 @@ Official company website for **Duvdex LLC**, a mobile app studio building games 
 | App | Platform | Status |
 |-----|----------|--------|
 | [Passport Party](https://duvdex.com/passport-party) | iOS | In review |
-| [Callyout](https://callyout.com) | Web · iOS | Coming soon |
+| [Callyout](https://callyout.com) | Web | live | iOS | Coming soon |
 
 ### Learn
 | App | Platform | Status |
 |-----|----------|--------|
-| [SQLlearn](https://apps.apple.com/us/app/sqllearn/id6762401475) | iOS · macOS | Live |
+| [SQLlearn](https://apps.apple.com/us/app/sqllearn/id6762401475) | iOS | Live |
 | [PythonPlayroom](https://apps.apple.com/us/app/pythonplayroom/id6762590223) | iOS | Live |
 
 ---
