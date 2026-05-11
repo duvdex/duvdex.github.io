@@ -12,7 +12,7 @@ Official company website for **Duvdex LLC**, a mobile app studio building games 
 | App | Platform | Status |
 |-----|----------|--------|
 | [Passport Party](https://duvdex.com/passport-party) | iOS | In review |
-| [Callyout](https://callyout.com) | Web | live | iOS | Coming soon |
+| [Callyout](https://callyout.com) | Web | Live | 
 
 ### Learn
 | App | Platform | Status |
