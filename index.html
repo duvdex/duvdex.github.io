@@ -3,331 +3,288 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Duvdex — Apps built for people who play and learn</title>
+<title>DUVDEX — Made for people who care, play, and learn</title>
+<meta name="description" content="DUVDEX LLC builds mobile apps and consumer brands for people who care, play, and learn. Based in Miami, built for the world.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-  :root {
-    --bg: #f8f7f4;
-    --bg2: #ffffff;
-    --text: #1a1a18;
-    --muted: #6b6b67;
-    --faint: #b0afa8;
-    --border: rgba(0,0,0,0.08);
-    --border2: rgba(0,0,0,0.14);
-    --blue-bg: #e8f0fe;
-    --blue: #1a56db;
-    --purple-bg: #ede9fe;
-    --purple: #6d28d9;
-    --teal-bg: #d1fae5;
-    --teal: #065f46;
-    --amber-bg: #fef3c7;
-    --amber: #92400e;
-    --green-bg: #dcfce7;
-    --green: #166534;
-    --orange-bg: #ffedd5;
-    --orange: #9a3412;
-  }
-
-  html { scroll-behavior: smooth; }
-
-  body {
-    font-family: 'DM Sans', sans-serif;
-    background: var(--bg);
-    color: var(--text);
-    line-height: 1.6;
-    min-height: 100vh;
-  }
-
-  nav {
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    background: rgba(248,247,244,0.92);
-    backdrop-filter: blur(12px);
-    border-bottom: 1px solid var(--border);
-    padding: 0 max(24px, calc((100vw - 1100px)/2));
-  }
-
-  .nav-inner {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 56px;
-  }
-
-  .logo {
-    font-size: 17px;
-    font-weight: 500;
-    letter-spacing: -0.02em;
-    color: var(--text);
-    text-decoration: none;
-  }
-
-  .logo span {
-    font-family: 'DM Mono', monospace;
-    font-size: 13px;
-    color: var(--faint);
-    margin-left: 6px;
-  }
-
-  .nav-links {
-    display: flex;
-    gap: 28px;
-    list-style: none;
-  }
-
-  .nav-links a {
-    font-size: 13px;
-    color: var(--muted);
-    text-decoration: none;
-    transition: color .15s;
-  }
-
-  .nav-links a:hover { color: var(--text); }
-
-  main {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 0 24px;
-  }
-
-  .hero {
-    padding: 80px 0 64px;
-    max-width: 560px;
-  }
-
-  .hero-eyebrow {
-    font-family: 'DM Mono', monospace;
-    font-size: 11px;
-    color: var(--faint);
-    letter-spacing: .1em;
-    text-transform: uppercase;
-    margin-bottom: 16px;
-  }
-
-  .hero h1 {
-    font-size: clamp(32px, 5vw, 48px);
-    font-weight: 300;
-    line-height: 1.15;
-    letter-spacing: -0.03em;
-    margin-bottom: 20px;
-    color: var(--text);
-  }
-
-  .hero h1 em {
-    font-style: normal;
-    font-weight: 500;
-  }
-
-  .hero p {
-    font-size: 16px;
-    color: var(--muted);
-    max-width: 420px;
-    line-height: 1.7;
-  }
-
-  .section {
-    padding: 48px 0 0;
-  }
-
-  .section-header {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    margin-bottom: 20px;
-  }
-
-  .section-label {
-    font-family: 'DM Mono', monospace;
-    font-size: 11px;
-    letter-spacing: .1em;
-    text-transform: uppercase;
-    color: var(--faint);
-    white-space: nowrap;
-  }
-
-  .section-line {
-    flex: 1;
-    height: 1px;
-    background: var(--border);
-  }
-
-  .product-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 16px;
-  }
-
-  .product-card {
-    background: var(--bg2);
-    border: 1px solid var(--border);
-    border-radius: 16px;
-    padding: 24px;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    transition: border-color .2s, transform .2s;
-    text-decoration: none;
-    color: inherit;
-  }
-
-  .product-card:hover {
-    border-color: var(--border2);
-    transform: translateY(-2px);
-  }
-
-  .card-top {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-  }
-
-  .card-icon {
-    width: 48px;
-    height: 48px;
-    border-radius: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 22px;
-  }
-
-  .status-badge {
-    font-size: 11px;
-    font-weight: 500;
-    padding: 4px 10px;
-    border-radius: 20px;
-    font-family: 'DM Mono', monospace;
-  }
-
-  .badge-live { background: var(--green-bg); color: var(--green); }
-  .badge-review { background: var(--amber-bg); color: var(--amber); }
-  .badge-soon { background: var(--bg); color: var(--faint); border: 1px solid var(--border); }
-
-  .card-body h2 {
-    font-size: 18px;
-    font-weight: 500;
-    letter-spacing: -0.02em;
-    margin-bottom: 6px;
-  }
-
-  .card-body p {
-    font-size: 13px;
-    color: var(--muted);
-    line-height: 1.6;
-  }
-
-  .card-modules {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 6px;
-  }
-
-  .module-tag {
-    font-size: 11px;
-    padding: 3px 8px;
-    border-radius: 6px;
-    background: var(--bg);
-    color: var(--muted);
-    border: 1px solid var(--border);
-    font-family: 'DM Mono', monospace;
-  }
-
-  .card-footer {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-top: 12px;
-    border-top: 1px solid var(--border);
-    margin-top: auto;
-  }
-
-  .platform-pills {
-    display: flex;
-    gap: 6px;
-  }
-
-  .platform-pill {
-    font-size: 11px;
-    color: var(--muted);
-    display: flex;
-    align-items: center;
-    gap: 4px;
-  }
-
-  .app-store-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    font-size: 12px;
-    font-weight: 500;
-    color: var(--text);
-    background: var(--bg);
-    border: 1px solid var(--border2);
-    border-radius: 8px;
-    padding: 6px 12px;
-    text-decoration: none;
-    transition: background .15s;
-  }
-
-  .app-store-btn:hover { background: #ededea; }
-
-  .divider {
-    height: 1px;
-    background: var(--border);
-    margin: 64px 0 0;
-  }
-
-  footer {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 24px 24px 48px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 16px;
-  }
-
-  footer p {
-    font-size: 12px;
-    color: var(--faint);
-    font-family: 'DM Mono', monospace;
-  }
-
-  .footer-links {
-    display: flex;
-    gap: 20px;
-  }
-
-  .footer-links a {
-    font-size: 12px;
-    color: var(--faint);
-    text-decoration: none;
-    transition: color .15s;
-  }
-
-  .footer-links a:hover { color: var(--muted); }
-
-  @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(16px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-
-  .hero { animation: fadeUp .5s ease both; }
-  .product-card:nth-child(1) { animation: fadeUp .4s .1s ease both; }
-  .product-card:nth-child(2) { animation: fadeUp .4s .2s ease both; }
-  .product-card:nth-child(3) { animation: fadeUp .4s .1s ease both; }
-  .product-card:nth-child(4) { animation: fadeUp .4s .2s ease both; }
-
-  @media (max-width: 600px) {
-    .hero { padding: 48px 0 40px; }
-    .product-grid { grid-template-columns: 1fr; }
-    .nav-links { display: none; }
-  }
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --bg: #f8f7f4;
+  --bg2: #ffffff;
+  --text: #1a1a18;
+  --muted: #6b6b67;
+  --faint: #b0afa8;
+  --border: rgba(0,0,0,0.08);
+  --border2: rgba(0,0,0,0.14);
+  --blue-bg: #e8f0fe;
+  --blue: #1a56db;
+  --purple-bg: #ede9fe;
+  --purple: #6d28d9;
+  --teal-bg: #d1fae5;
+  --teal: #065f46;
+  --amber-bg: #fef3c7;
+  --amber: #92400e;
+  --green-bg: #dcfce7;
+  --green: #166534;
+  --orange-bg: #ffedd5;
+  --orange: #9a3412;
+  --stone-bg: #f5f0eb;
+  --stone: #57534e;
+}
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  min-height: 100vh;
+}
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(248,247,244,0.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+  padding: 0 max(24px, calc((100vw - 1100px)/2));
+}
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 56px;
+}
+.logo {
+  font-size: 17px;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  color: var(--text);
+  text-decoration: none;
+}
+.logo span {
+  font-family: 'DM Mono', monospace;
+  font-size: 13px;
+  color: var(--faint);
+  margin-left: 6px;
+}
+.nav-links {
+  display: flex;
+  gap: 28px;
+  list-style: none;
+}
+.nav-links a {
+  font-size: 13px;
+  color: var(--muted);
+  text-decoration: none;
+  transition: color .15s;
+}
+.nav-links a:hover { color: var(--text); }
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+.hero {
+  padding: 80px 0 64px;
+  max-width: 560px;
+}
+.hero-eyebrow {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  color: var(--faint);
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+.hero h1 {
+  font-size: clamp(32px, 5vw, 48px);
+  font-weight: 300;
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+  margin-bottom: 20px;
+  color: var(--text);
+}
+.hero h1 em {
+  font-style: normal;
+  font-weight: 500;
+}
+.hero p {
+  font-size: 16px;
+  color: var(--muted);
+  max-width: 420px;
+  line-height: 1.7;
+}
+.section { padding: 48px 0 0; }
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+.section-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--faint);
+  white-space: nowrap;
+}
+.section-line {
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 16px;
+}
+.product-card {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  transition: border-color .2s, transform .2s;
+  text-decoration: none;
+  color: inherit;
+}
+.product-card:hover {
+  border-color: var(--border2);
+  transform: translateY(-2px);
+}
+.card-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.card-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+}
+.status-badge {
+  font-size: 11px;
+  font-weight: 500;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-family: 'DM Mono', monospace;
+}
+.badge-live { background: var(--green-bg); color: var(--green); }
+.badge-review { background: var(--amber-bg); color: var(--amber); }
+.badge-soon { background: var(--bg); color: var(--faint); border: 1px solid var(--border); }
+.badge-new { background: var(--stone-bg); color: var(--stone); }
+.card-body h2 {
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  margin-bottom: 6px;
+}
+.card-body p {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+.card-modules {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.module-tag {
+  font-size: 11px;
+  padding: 3px 8px;
+  border-radius: 6px;
+  background: var(--bg);
+  color: var(--muted);
+  border: 1px solid var(--border);
+  font-family: 'DM Mono', monospace;
+}
+.card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+  margin-top: auto;
+}
+.platform-pills {
+  display: flex;
+  gap: 6px;
+}
+.platform-pill {
+  font-size: 11px;
+  color: var(--muted);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.app-store-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text);
+  background: var(--bg);
+  border: 1px solid var(--border2);
+  border-radius: 8px;
+  padding: 6px 12px;
+  text-decoration: none;
+  transition: background .15s;
+}
+.app-store-btn:hover { background: #ededea; }
+.divider {
+  height: 1px;
+  background: var(--border);
+  margin: 64px 0 0;
+}
+footer {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px 24px 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+footer p {
+  font-size: 12px;
+  color: var(--faint);
+  font-family: 'DM Mono', monospace;
+}
+.footer-links {
+  display: flex;
+  gap: 20px;
+}
+.footer-links a {
+  font-size: 12px;
+  color: var(--faint);
+  text-decoration: none;
+  transition: color .15s;
+}
+.footer-links a:hover { color: var(--muted); }
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.hero { animation: fadeUp .5s ease both; }
+.product-card:nth-child(1) { animation: fadeUp .4s .1s ease both; }
+.product-card:nth-child(2) { animation: fadeUp .4s .2s ease both; }
+.product-card:nth-child(3) { animation: fadeUp .4s .1s ease both; }
+.product-card:nth-child(4) { animation: fadeUp .4s .2s ease both; }
+@media (max-width: 600px) {
+  .hero { padding: 48px 0 40px; }
+  .product-grid { grid-template-columns: 1fr; }
+  .nav-links { display: none; }
+}
 </style>
 </head>
 <body>
@@ -338,6 +295,7 @@
     <ul class="nav-links">
       <li><a href="#games">Games</a></li>
       <li><a href="#learn">Learn</a></li>
+      <li><a href="#brands">Brands</a></li>
       <li><a href="mailto:support@duvdex.com">Contact</a></li>
     </ul>
   </div>
@@ -346,8 +304,8 @@
 <main>
   <section class="hero">
     <div class="hero-eyebrow">Duvdex LLC · Est. 2025</div>
-    <h1>Apps built for people<br>who <em>play</em> and <em>learn</em>.</h1>
-    <p>We make mobile apps that are approachable, well-designed, and genuinely useful. Based in the US, built for the world.</p>
+    <h1>Made for people who<br><em>care</em>, <em>play</em>, and <em>learn</em>.</h1>
+    <p>We build mobile apps and consumer brands that are approachable, well-designed, and genuinely useful. Based in Miami, built for the world.</p>
   </section>
 
   <section class="section" id="games">
@@ -360,7 +318,7 @@
       <a class="product-card" href="https://apps.apple.com/app/passport-party/id6765947275" target="_blank">
         <div class="card-top">
           <div class="card-icon" style="background:#e8f0fe;">🌍</div>
-          <span class="status-badge badge-review">In review</span>
+          <span class="status-badge badge-live">Live</span>
         </div>
         <div class="card-body">
           <h2>Passport Party</h2>
@@ -380,10 +338,10 @@
         </div>
       </a>
 
-      <div class="product-card" style="cursor:default;">
+      <a class="product-card" href="https://callyout.com" target="_blank">
         <div class="card-top">
           <div class="card-icon" style="background:#ede9fe;">🔮</div>
-          <span class="status-badge badge-soon">Coming soon</span>
+          <span class="status-badge badge-live">Live</span>
         </div>
         <div class="card-body">
           <h2>Callyout</h2>
@@ -400,9 +358,9 @@
             <span class="platform-pill">🌐 Web</span>
             <span class="platform-pill">📱 iOS</span>
           </div>
-          <span style="font-size:12px;color:var(--faint);">callyout.com</span>
+          <span class="app-store-btn">callyout.com →</span>
         </div>
-      </div>
+      </a>
 
     </div>
   </section>
@@ -461,6 +419,38 @@
             <span class="platform-pill">📱 iOS</span>
           </div>
           <span class="app-store-btn">App Store →</span>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+  <section class="section" id="brands">
+    <div class="section-header">
+      <span class="section-label">Brands</span>
+      <div class="section-line"></div>
+    </div>
+    <div class="product-grid">
+
+      <a class="product-card" href="https://nordo.skin" target="_blank">
+        <div class="card-top">
+          <div class="card-icon" style="background:#f5f0eb;">🪴</div>
+          <span class="status-badge badge-new">Launching 2026</span>
+        </div>
+        <div class="card-body">
+          <h2>NORDO</h2>
+          <p>Men's skincare built for simplicity. Clean formulas, no fuss — everything your skin needs, nothing it doesn't.</p>
+        </div>
+        <div class="card-modules">
+          <span class="module-tag">skincare</span>
+          <span class="module-tag">men's</span>
+          <span class="module-tag">clean formulas</span>
+        </div>
+        <div class="card-footer">
+          <div class="platform-pills">
+            <span class="platform-pill">🛒 Shopify</span>
+          </div>
+          <span class="app-store-btn">nordo.skin →</span>
         </div>
       </a>
 
