@@ -1,4 +1,4 @@
-# Duvdex LLC — duvdex.com
+# DUVDEX LLC — duvdex.com
 
 Official company website for **Duvdex LLC**, a mobile app studio building games and learning tools.
 
