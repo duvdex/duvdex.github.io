@@ -1,6 +1,6 @@
-# DUVDEX LLC — duvdex.com
+# Duvdex LLC — duvdex.com
 
-Official company website for **Duvdex LLC**, a mobile app studio building games and learning tools.
+Official company website for **Duvdex LLC**, a studio building mobile apps and consumer brands for people who care, play, and learn.
 
 🌐 **[duvdex.com](https://duvdex.com)**
 
@@ -9,16 +9,24 @@ Official company website for **Duvdex LLC**, a mobile app studio building games 
 ## Products
 
 ### Games
+
 | App | Platform | Status |
 |-----|----------|--------|
-| [Passport Party](https://duvdex.com/passport-party) | iOS | Live |
-| [Callyout](https://callyout.com) | Web | Live | 
+| [Passport Party](https://apps.apple.com/app/passport-party/id6765947275) | iOS | Live |
+| [Callyout](https://callyout.com) | Web · iOS | Live |
 
 ### Learn
+
 | App | Platform | Status |
 |-----|----------|--------|
-| [SQLlearn](https://apps.apple.com/us/app/sqllearn/id6762401475) | iOS | Live |
+| [SQLlearn](https://apps.apple.com/us/app/sqllearn/id6762401475) | iOS · macOS | Live |
 | [PythonPlayroom](https://apps.apple.com/us/app/pythonplayroom/id6762590223) | iOS | Live |
+
+### Brands
+
+| Brand | Category | Status |
+|-------|----------|--------|
+| [NORDO](https://nordo.skin) | Men's skincare | Launching 2026 |
 
 ---
 
@@ -40,4 +48,4 @@ This site is a static HTML page hosted on GitHub Pages with a custom domain.
 
 ---
 
-© 2025 Duvdex LLC. All rights reserved.
+© 2026 Duvdex LLC. All rights reserved.
