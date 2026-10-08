@@ -54,7 +54,8 @@
           <li>
             <strong>Teams and discussions:</strong> team names, member names, model selections,
             roles, topics, discussion settings, generated replies, partial replies, and conversation
-            context summaries.
+            context questions and answers, research briefs, extracted claims, source links,
+            verification results, final summaries, and conversation context summaries.
           </li>
           <li>
             <strong>Consent and service records:</strong> consent date and version, plan and test
@@ -80,7 +81,8 @@
         <h2>2. Why We Use It</h2>
         <p>
           We use information to authenticate you, save and synchronize your teams and discussions,
-          check consent and usage limits, generate replies, screen topics for harmful requests,
+          check consent and usage limits, generate replies, research topics, check selected factual
+          claims, summarize discussions, screen topics for harmful requests,
           maintain service security, and respond to support requests.
         </p>
         <p>
@@ -101,12 +103,13 @@
         <p>
           OpenRouter routes requests to external model-serving providers. The configured models
           include ChatGPT from OpenAI, Claude from Anthropic, Gemini from Google, and Mistral from
-          Mistral AI. A DeepSeek model is configured only for approved hosting outside China through
+          Mistral AI. Perplexity Sonar provides optional research and selected claim checks. A
+          DeepSeek model is configured only for approved hosting outside China through
           DeepInfra. If compliant routing is unavailable, that member is skipped rather than sent
           through another route.
         </p>
         <p>
-          OpenRouter, OpenAI, Anthropic, Google and DeepInfra are US-based organizations; Mistral AI
+          OpenRouter, OpenAI, Anthropic, Google, Perplexity and DeepInfra are US-based organizations; Mistral AI
           is based in France. Provider headquarters are not a guarantee of a particular processing
           location.
         </p>
@@ -132,9 +135,20 @@
           generated.
         </p>
         <p>
-          Research, external fact checking, final executive summaries, and additional providers are
-          not enabled in this beta. We will update disclosures before introducing materially
-          different processing.
+          New discussions include a Referee that sends reply text and relevant topic/context to a
+          standard Mistral model to extract selected factual claims. Selected claims and context
+          are sent through OpenRouter to Perplexity Sonar for web searches and verification.
+          Optional Web Research sends the topic and context to Sonar before member replies. Search
+          requests may contain information from your topic, context or claims. Source links and
+          results are saved with your discussion; checks cover selected claims, not every reply.
+        </p>
+        <p>
+          Final Summary is on by default for new discussions and can be switched off before Start.
+          When on, the saved transcript, context, research brief and claim results are sent to a
+          Claude model through OpenRouter to produce a saved summary and action plan. A next-step
+          checklist is saved locally on your device. Research and summaries are not run
+          retroactively on older discussions. These features require the updated AI consent before
+          new processing begins.
         </p>
       </section>
       <section id="services">
@@ -165,7 +179,9 @@
         <p>
           We keep saved account, consent, team and discussion records until account deletion is
           requested and completed, rather than automatically expiring saved history. Generated
-          replies and context summaries are saved so a discussion can be reopened on another device.
+          replies, research briefs, claim results, final summaries and context summaries are saved
+          so a discussion can be reopened on another device. Locally saved checklist choices are
+          specific to that account and device; they are not synchronized across devices.
         </p>
         <p>
           You can delete a team in the app. This removes that team and its editable members, but
