@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="How Duvdex LLC handles account information, saved discussions and AI processing in the Roundtable AI private beta."
+      content="How Duvdex LLC handles account information, saved discussions, AI processing and subscriptions in Roundtable AI."
     />
     <title>Roundtable AI Privacy Policy | Duvdex</title>
     <link rel="stylesheet" href="../legal.css" />
@@ -24,10 +24,11 @@
     <main id="main">
       <p class="product">Roundtable AI</p>
       <h1>Privacy Policy</h1>
-      <p class="meta">Private beta. Effective October 7, 2026.</p>
+      <p class="meta">Updated October 9, 2026.</p>
       <p>
-        This policy describes how Duvdex LLC handles information in the Roundtable AI private beta.
-        It covers the app and these Roundtable legal pages, not other Duvdex products.
+        This policy describes how Duvdex LLC handles information in Roundtable AI, including test
+        and store builds. It covers the app and these Roundtable legal pages, not other Duvdex
+        products.
       </p>
       <nav class="contents" aria-label="Policy contents">
         <p>In This Policy</p>
@@ -48,8 +49,10 @@
           <li>
             <strong>Account information:</strong> email address, account identifier, sign-in method,
             authentication records, and profile details supplied by Apple or Google, such as a name.
-            An Apple relay email may be used when available. We do not receive your Apple or Google
-            password.
+            Where available, an Apple authorization code is exchanged on our server for a refresh
+            token, encrypted in storage, so we can revoke Apple authorization during account
+            deletion. An Apple relay email may be used when available. We do not receive your Apple
+            or Google password.
           </li>
           <li>
             <strong>Teams and discussions:</strong> team names, member names, model selections,
@@ -58,13 +61,18 @@
             verification results, final summaries, and conversation context summaries.
           </li>
           <li>
-            <strong>Consent and service records:</strong> consent date and version, plan and test
-            credit balances, request identifiers, timestamps, model usage and estimated costs, and
+            <strong>Consent and service records:</strong> consent date and version, plan and credit
+            balances, request identifiers, timestamps, model usage and estimated costs, and
             error/status records.
           </li>
           <li>
-            <strong>Support:</strong> the messages and contact details you provide when contacting
-            us.
+            <strong>Support and reports:</strong> the messages and contact details you provide when
+            contacting us, and reported AI replies, report reasons and optional notes.
+          </li>
+          <li>
+            <strong>Subscriptions:</strong> your Roundtable account identifier, store purchase and
+            receipt records, product, subscription status, expiry and renewal information. Apple or
+            Google handles payment details; Roundtable does not receive your card number.
           </li>
           <li>
             <strong>Technical information:</strong> our hosting, authentication, email and AI
@@ -82,13 +90,21 @@
         <p>
           We use information to authenticate you, save and synchronize your teams and discussions,
           check consent and usage limits, generate replies, research topics, check selected factual
-          claims, summarize discussions, screen topics for harmful requests,
-          maintain service security, and respond to support requests.
+          claims, summarize discussions, screen topics for harmful requests, maintain service
+          security, review reported replies, verify subscription access, restore purchases,
+          understand subscription activity, and respond to support requests.
         </p>
         <p>
-          The current beta has no advertising, advertising tracking, or separate marketing analytics
-          SDK. We do not sell your personal information or use discussion content for targeted
-          advertising.
+          The app has no advertising, advertising tracking, or separate marketing analytics SDK. We
+          do not sell your personal information or use discussion content for targeted advertising.
+        </p>
+        <p>
+          RevenueCat processes subscription and purchase records linked to your Roundtable account
+          identifier for receipt validation, subscription access, purchase restoration and billing
+          analytics. It also handles technical app/store metadata required for its service. See
+          <a href="https://www.revenuecat.com/privacy/">RevenueCat's privacy policy</a>. We do not
+          deliberately send discussion content or account emails to RevenueCat, and do not configure
+          advertising attribution integrations or advertising identifier collection.
         </p>
       </section>
       <section id="ai">
@@ -104,14 +120,14 @@
           OpenRouter routes requests to external model-serving providers. The configured models
           include ChatGPT from OpenAI, Claude from Anthropic, Gemini from Google, and Mistral from
           Mistral AI. Perplexity Sonar provides optional research and selected claim checks. A
-          DeepSeek model is configured only for approved hosting outside China through
-          DeepInfra. If compliant routing is unavailable, that member is skipped rather than sent
-          through another route.
+          DeepSeek model is configured only for approved hosting outside China through DeepInfra. If
+          compliant routing is unavailable, that member is skipped rather than sent through another
+          route.
         </p>
         <p>
-          OpenRouter, OpenAI, Anthropic, Google, Perplexity and DeepInfra are US-based organizations; Mistral AI
-          is based in France. Provider headquarters are not a guarantee of a particular processing
-          location.
+          OpenRouter, OpenAI, Anthropic, Google, Perplexity and DeepInfra are US-based
+          organizations; Mistral AI is based in France. Provider headquarters are not a guarantee of
+          a particular processing location.
         </p>
         <p>
           Requests require OpenRouter routes that disallow training on inputs and outputs and
@@ -136,11 +152,11 @@
         </p>
         <p>
           New discussions include a Referee that sends reply text and relevant topic/context to a
-          standard Mistral model to extract selected factual claims. Selected claims and context
-          are sent through OpenRouter to Perplexity Sonar for web searches and verification.
-          Optional Web Research sends the topic and context to Sonar before member replies. Search
-          requests may contain information from your topic, context or claims. Source links and
-          results are saved with your discussion; checks cover selected claims, not every reply.
+          standard Mistral model to extract selected factual claims. Selected claims and context are
+          sent through OpenRouter to Perplexity Sonar for web searches and verification. Optional
+          Web Research sends the topic and context to Sonar before member replies. Search requests
+          may contain information from your topic, context or claims. Source links and results are
+          saved with your discussion; checks cover selected claims, not every reply.
         </p>
         <p>
           Final Summary is on by default for new discussions and can be switched off before Start.
@@ -189,11 +205,26 @@
           AI consent are not account deletion.
         </p>
         <p>
-          To request account or discussion deletion during the private beta, email
-          <a href="mailto:support@duvdex.com">support@duvdex.com</a>. Tell us which account and data
-          the request concerns. We verify ownership before carrying out a deletion and respond as
-          required by applicable law. Do not send passwords or sign-in codes. In-app account and
-          discussion deletion are not available yet.
+          Updated builds provide Settings &gt; Delete account. After confirmation, deletion pauses
+          your discussions, removes your account and saved data from active Roundtable storage on
+          all devices, and requests deletion of your RevenueCat customer record. Reports you own,
+          and reports referencing your deleted replies, are removed as well. An external service
+          failure may leave deletion pending; retry in Settings or contact support. A request
+          already sent to an AI provider may finish, but its response is not saved back to a deleted
+          account.
+        </p>
+        <p>
+          Stored Apple authorization tokens are revoked when available. For older Apple sign-ins
+          without a stored token, the app explains how to remove Roundtable in your Apple account's
+          Sign in with Apple settings after deletion. Deletion does not cancel an Apple or Google
+          subscription; cancel renewal in your store account. Store-managed transaction records are
+          handled separately by the store.
+        </p>
+        <p>
+          For discussion-only deletion, an older build without the account deletion option, or other
+          privacy requests, email <a href="mailto:support@duvdex.com">support@duvdex.com</a>. Tell
+          us which account and data the request concerns. We verify ownership and respond as
+          applicable law requires. Do not send passwords or sign-in codes.
         </p>
         <p>
           Completed deletion requests remove the requested account or discussion data from active
@@ -224,14 +255,13 @@
           to a supervisory authority. We may need to verify your identity to respond to a request.
         </p>
         <p>
-          The private beta is limited to adults aged 18 and over, or a higher minimum required
-          locally. It is not offered to children. If you believe a child has submitted information,
-          contact us.
+          Roundtable is limited to adults aged 18 and over, or a higher minimum required locally. It
+          is not offered to children. If you believe a child has submitted information, contact us.
         </p>
         <p>
           The current app does not verify age automatically. Do not participate if you do not meet
-          this requirement. Contact us if a child has used the beta so we can investigate and
-          address the account and its information.
+          this requirement. Contact us if a child has used the app so we can investigate and address
+          the account and its information.
         </p>
       </section>
       <section id="security">
@@ -259,6 +289,6 @@
         </p>
       </section>
     </main>
-    <footer>Roundtable AI &middot; Duvdex LLC &middot; Private Beta</footer>
+    <footer>Roundtable AI &middot; Duvdex LLC</footer>
   </body>
 </html>
