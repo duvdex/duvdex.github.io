@@ -44,6 +44,11 @@ Linking existing documents does not create new app terms or change store setting
 Callyout is no longer listed.
 
 The existing Roundtable store icon is copied unchanged to `assets/roundtable-ai.png`.
+Passport Party, SQLlearn and PythonPlayroom use the exact 512-pixel artwork from
+their live Apple App Store listings, replacing the old emoji placeholders.
+See [asset sources](assets/README.md). No app or brand artwork is regenerated.
+At Eduardo's later request, NORDO's placeholder is also replaced with its existing
+website wordmark. Its copy, destination and lack of app legal links stay unchanged.
 
 ---
 
