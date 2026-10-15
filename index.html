@@ -138,7 +138,7 @@ main {
 }
 .product-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
   gap: 16px;
 }
 .product-card {
@@ -157,6 +157,27 @@ main {
   border-color: var(--border2);
   transform: translateY(-2px);
 }
+.app-card { border-radius: 8px; min-width: 0; }
+.app-card .card-body h2 { letter-spacing: 0; overflow-wrap: anywhere; }
+.app-card .card-icon img { width: 48px; height: 48px; border-radius: 8px; object-fit: contain; }
+.app-card .card-footer { flex-wrap: wrap; gap: 12px; }
+.release-status { font-size: 12px; color: var(--muted); }
+.card-legal {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 20px;
+}
+.card-legal a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  font-size: 12px;
+  color: var(--muted);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.card-legal a:hover { color: var(--text); }
+a:focus-visible { outline: 2px solid var(--blue); outline-offset: 4px; }
 .card-top {
   display: flex;
   align-items: flex-start;
@@ -263,6 +284,7 @@ footer p {
 }
 .footer-links {
   display: flex;
+  flex-wrap: wrap;
   gap: 20px;
 }
 .footer-links a {
@@ -294,6 +316,7 @@ footer p {
   <div class="nav-inner">
     <a href="/" class="logo">Duvdex <span>LLC</span></a>
     <ul class="nav-links">
+      <li><a href="#apps">Apps</a></li>
       <li><a href="#games">Games</a></li>
       <li><a href="#learn">Learn</a></li>
       <li><a href="#brands">Brands</a></li>
@@ -309,6 +332,39 @@ footer p {
     <p>We build mobile apps and consumer brands that are approachable, well-designed, and genuinely useful. Based in Miami, built for the world.</p>
   </section>
 
+  <section class="section" id="apps" aria-label="AI and productivity apps">
+    <div class="section-header">
+      <span class="section-label">AI &amp; Productivity</span>
+      <div class="section-line"></div>
+    </div>
+    <div class="product-grid">
+      <article class="product-card app-card" aria-labelledby="roundtable-title">
+        <div class="card-top">
+          <div class="card-icon"><img src="assets/roundtable-ai.png" alt="" width="48" height="48"></div>
+          <span class="status-badge badge-review">Closed testing</span>
+        </div>
+        <div class="card-body">
+          <h2 id="roundtable-title">Roundtable AI</h2>
+          <p>One question. Multiple perspectives. Bring a team of AI advisors together to explore ideas, weigh decisions, check claims with sources, and finish with clear next steps.</p>
+        </div>
+        <div class="card-modules">
+          <span class="module-tag">AI teams</span>
+          <span class="module-tag">source checks</span>
+          <span class="module-tag">summaries</span>
+          <span class="module-tag">18+</span>
+        </div>
+        <div class="card-footer">
+          <div class="platform-pills"><span class="platform-pill">iOS &amp; Android</span></div>
+          <span class="release-status">Public release coming soon</span>
+        </div>
+        <div class="card-legal" aria-label="Roundtable AI legal pages">
+          <a href="https://duvdex.com/roundtable/terms/">Terms</a>
+          <a href="https://duvdex.com/roundtable/privacy/">Privacy</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
   <section class="section" id="games">
     <div class="section-header">
       <span class="section-label">Games</span>
@@ -316,13 +372,13 @@ footer p {
     </div>
     <div class="product-grid">
 
-      <a class="product-card" href="https://apps.apple.com/app/passport-party/id6765947275" target="_blank">
+      <article class="product-card app-card" aria-labelledby="passport-title">
         <div class="card-top">
           <div class="card-icon" style="background:#e8f0fe;">🌍</div>
           <span class="status-badge badge-live">Live</span>
         </div>
         <div class="card-body">
-          <h2>Passport Party</h2>
+          <h2 id="passport-title">Passport Party</h2>
           <p>A global trivia party game. Race through world cities, collect passport stamps, and beat your friends on the leaderboard in 6–11 minute sessions.</p>
         </div>
         <div class="card-modules">
@@ -335,33 +391,13 @@ footer p {
           <div class="platform-pills">
             <span class="platform-pill">📱 iOS</span>
           </div>
-          <span class="app-store-btn">App Store →</span>
+          <a class="app-store-btn" href="https://apps.apple.com/app/passport-party/id6765947275" target="_blank" rel="noopener noreferrer" aria-label="Passport Party on the App Store">App Store →</a>
         </div>
-      </a>
-
-      <a class="product-card" href="https://callyout.com" target="_blank">
-        <div class="card-top">
-          <div class="card-icon" style="background:#ede9fe;">🔮</div>
-          <span class="status-badge badge-live">Live</span>
+        <div class="card-legal" aria-label="Passport Party legal pages">
+          <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Terms (Apple EULA)</a>
+          <a href="https://eddmoura.github.io/passport-party/privacy.html">Privacy</a>
         </div>
-        <div class="card-body">
-          <h2>Callyout</h2>
-          <p>Predict world events. Prove you called it. Make YES/NO forecasts on sports, crypto, pop culture and more — then track your accuracy score.</p>
-        </div>
-        <div class="card-modules">
-          <span class="module-tag">predictions</span>
-          <span class="module-tag">events</span>
-          <span class="module-tag">leaderboard</span>
-          <span class="module-tag">free</span>
-        </div>
-        <div class="card-footer">
-          <div class="platform-pills">
-            <span class="platform-pill">🌐 Web</span>
-            <span class="platform-pill">📱 iOS</span>
-          </div>
-          <span class="app-store-btn">callyout.com →</span>
-        </div>
-      </a>
+      </article>
 
     </div>
   </section>
@@ -373,13 +409,13 @@ footer p {
     </div>
     <div class="product-grid">
 
-      <a class="product-card" href="https://apps.apple.com/us/app/sqllearn/id6762401475" target="_blank">
+      <article class="product-card app-card" aria-labelledby="sqllearn-title">
         <div class="card-top">
           <div class="card-icon" style="background:#d1fae5;">🗃️</div>
           <span class="status-badge badge-live">Live</span>
         </div>
         <div class="card-body">
-          <h2>SQLlearn</h2>
+          <h2 id="sqllearn-title">SQLlearn</h2>
           <p>Learn SQL interactively with real queries on ecommerce and HR datasets. Structured lessons, spaced-repetition practice, and a Schema Explorer. One-time purchase unlocks all 6 modules.</p>
         </div>
         <div class="card-modules">
@@ -394,17 +430,21 @@ footer p {
             <span class="platform-pill">📱 iOS</span>
             <span class="platform-pill">💻 macOS</span>
           </div>
-          <span class="app-store-btn">App Store →</span>
+          <a class="app-store-btn" href="https://apps.apple.com/us/app/sqllearn/id6762401475" target="_blank" rel="noopener noreferrer" aria-label="SQLlearn on the App Store">App Store →</a>
         </div>
-      </a>
+        <div class="card-legal" aria-label="SQLlearn legal pages">
+          <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Terms (Apple EULA)</a>
+          <a href="https://learn-sql-flow.lovable.app/privacy">Privacy</a>
+        </div>
+      </article>
 
-      <a class="product-card" href="https://apps.apple.com/us/app/pythonplayroom/id6762590223" target="_blank">
+      <article class="product-card app-card" aria-labelledby="python-title">
         <div class="card-top">
           <div class="card-icon" style="background:#fef3c7;">🐍</div>
           <span class="status-badge badge-live">Live</span>
         </div>
         <div class="card-body">
-          <h2>PythonPlayroom</h2>
+          <h2 id="python-title">PythonPlayroom</h2>
           <p>Learn Python through bite-sized lessons and hands-on challenges. Covers Basics, NumPy, Pandas, Data Cleaning, GroupBy & Aggregation, and Joins. One-time unlock for all modules.</p>
         </div>
         <div class="card-modules">
@@ -419,9 +459,13 @@ footer p {
           <div class="platform-pills">
             <span class="platform-pill">📱 iOS</span>
           </div>
-          <span class="app-store-btn">App Store →</span>
+          <a class="app-store-btn" href="https://apps.apple.com/us/app/pythonplayroom/id6762590223" target="_blank" rel="noopener noreferrer" aria-label="PythonPlayroom on the App Store">App Store →</a>
         </div>
-      </a>
+        <div class="card-legal" aria-label="PythonPlayroom legal pages">
+          <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Terms (Apple EULA)</a>
+          <a href="https://pythonplayroom.lovable.app/privacy">Privacy</a>
+        </div>
+      </article>
 
     </div>
   </section>
@@ -465,8 +509,6 @@ footer p {
   <p>© 2026 Duvdex LLC · All rights reserved</p>
   <div class="footer-links">
     <a href="mailto:support@duvdex.com">support@duvdex.com</a>
-    <a href="/roundtable/privacy/">Roundtable Privacy</a>
-    <a href="/roundtable/terms/">Roundtable Terms</a>
     <a href="https://github.com/duvdex" target="_blank">GitHub</a>
   </div>
 </footer>

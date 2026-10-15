@@ -8,12 +8,17 @@ Official company website for **Duvdex LLC**, a studio building mobile apps and c
 
 ## Products
 
+### AI & Productivity
+
+| App | Platform | Status |
+|-----|----------|--------|
+| Roundtable AI | iOS · Android | Android closed testing; public release coming soon |
+
 ### Games
 
 | App | Platform | Status |
 |-----|----------|--------|
 | [Passport Party](https://apps.apple.com/app/passport-party/id6765947275) | iOS | Live |
-| [Callyout](https://callyout.com) | Web · iOS | Live |
 
 ### Learn
 
@@ -27,6 +32,18 @@ Official company website for **Duvdex LLC**, a studio building mobile apps and c
 | Brand | Category | Status |
 |-------|----------|--------|
 | [NORDO](https://nordo.skin) | Men's skincare | Launching 2026 |
+
+### App Legal Links
+
+Each app card has its own Terms and Privacy links. NORDO has no app legal links.
+Roundtable uses its approved Duvdex Terms and Privacy pages. The other three
+App Store cards link to Apple's standard EULA, explicitly labeled as such, and
+the respective privacy URLs already listed on their Apple App Store pages.
+Eduardo requested preserving the existing Apple setup, not rewriting policies.
+Linking existing documents does not create new app terms or change store settings.
+Callyout is no longer listed.
+
+The existing Roundtable store icon is copied unchanged to `assets/roundtable-ai.png`.
 
 ---
 
