@@ -36,12 +36,24 @@ Official company website for **Duvdex LLC**, a studio building mobile apps and c
 ### App Legal Links
 
 Each app card has its own Terms and Privacy links. NORDO has no app legal links.
-Roundtable uses its approved Duvdex Terms and Privacy pages. The other three
-App Store cards link to Apple's standard EULA, labeled simply "Terms" for consistent wording, and
-the respective privacy URLs already listed on their Apple App Store pages.
-Eduardo requested preserving the existing Apple setup, not rewriting policies.
-Linking existing documents does not create new app terms or change store settings.
-Callyout is no longer listed.
+All four app cards link to their own approved Terms and Privacy pages on Duvdex.
+Eduardo approved the three additional app-specific Terms and the revised PythonPlayroom
+and Passport Party Privacy pages on October 15, 2026. SQLlearn's already-approved
+Privacy content is unchanged; its navigation now links to its own Terms.
+
+| App | Terms | Privacy |
+|---|---|---|
+| Roundtable AI | [/roundtable/terms/](/roundtable/terms/) | [/roundtable/privacy/](/roundtable/privacy/) |
+| Passport Party | [/passport-party/terms/](/passport-party/terms/) | [/passport-party/privacy/](/passport-party/privacy/) |
+| SQLlearn | [/sqllearn/terms/](/sqllearn/terms/) | [/sqllearn/privacy/](/sqllearn/privacy/) |
+| PythonPlayroom | [/pythonplayroom/terms/](/pythonplayroom/terms/) | [/pythonplayroom/privacy/](/pythonplayroom/privacy/) |
+
+The new Terms supplement store licenses; they do not replace Apple's standard EULA
+or change store purchase terms. Legacy privacy pages on Lovable and eddmoura.github.io
+are not deleted because existing app versions and public store metadata can still use them.
+Store privacy URLs, privacy-label declarations and release submissions are separate
+console actions. Apple says saved URL changes release with the next app version.
+Callyout is no longer listed. NORDO's wordmark, copy and link are unchanged.
 
 The existing Roundtable store icon is copied unchanged to `assets/roundtable-ai.png`.
 Passport Party, SQLlearn and PythonPlayroom use the exact 512-pixel artwork from
