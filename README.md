@@ -37,7 +37,7 @@ Official company website for **Duvdex LLC**, a studio building mobile apps and c
 
 Each app card has its own Terms and Privacy links. NORDO has no app legal links.
 Roundtable uses its approved Duvdex Terms and Privacy pages. The other three
-App Store cards link to Apple's standard EULA, explicitly labeled as such, and
+App Store cards link to Apple's standard EULA, labeled simply "Terms" for consistent wording, and
 the respective privacy URLs already listed on their Apple App Store pages.
 Eduardo requested preserving the existing Apple setup, not rewriting policies.
 Linking existing documents does not create new app terms or change store settings.
