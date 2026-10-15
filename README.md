@@ -31,7 +31,7 @@ Official company website for **Duvdex LLC**, a studio building mobile apps and c
 
 | Brand | Category | Status |
 |-------|----------|--------|
-| [NORDO](https://nordo.skin) | Men's skincare | Launching 2026 |
+| [NORDO](https://nordo.skin) | Men's skincare | Live |
 
 ### App Legal Links
 
@@ -53,7 +53,8 @@ or change store purchase terms. Legacy privacy pages on Lovable and eddmoura.git
 are not deleted because existing app versions and public store metadata can still use them.
 Store privacy URLs, privacy-label declarations and release submissions are separate
 console actions. Apple says saved URL changes release with the next app version.
-Callyout is no longer listed. NORDO's wordmark, copy and link are unchanged.
+Callyout is no longer listed. NORDO now shows Live with no Shopify label.
+Its wordmark, description and destination are unchanged.
 
 The existing Roundtable store icon is copied unchanged to `assets/roundtable-ai.png`.
 Passport Party, SQLlearn and PythonPlayroom use the exact 512-pixel artwork from
